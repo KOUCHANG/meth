@@ -1,0 +1,12 @@
+{application, meth,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { meth_app, []}},
+  {env, []}
+ ]}.
