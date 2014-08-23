@@ -6,7 +6,9 @@
          float_to_integer_if_possible/1,
 
          pow/2,
-         pow_int/2
+         pow_int/2,
+
+         gcd/2
         ]).
 
 %% @doc 自然数かどうかを返す.
@@ -51,3 +53,10 @@ pow_int(_, 0, C) ->
     C;
 pow_int(Base, Exponent, C) when Exponent > 0 ->
     pow_int(Base * Base, Exponent div 2, case Exponent rem 2 of 0 -> C; 1 -> Base * C end).
+
+%% @doc 最大公約数.
+-spec gcd(A::integer(), B::integer()) -> GCD::integer().
+gcd(A, 0) ->
+    A;
+gcd(A, B) ->
+    gcd(B, A rem B).

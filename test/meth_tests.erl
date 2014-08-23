@@ -58,3 +58,11 @@ pow_int_test_() ->
      {"指数が適当に大きな数(2#11001)",
       ?_assertEqual(-847288609443, meth:pow_int(-3, 25))}
     ].
+
+gcd_test_() ->
+    [
+     {"第1引数が0の場合",        ?_assertEqual(2, meth:gcd(0, 2))},
+     {"第2引数が0の場合",        ?_assertEqual(2, meth:gcd(2, 0))},
+     {"第1引数の方が小さい場合", ?_assertEqual(3, meth:gcd(6, 9))},
+     {"第2引数の方が小さい場合", ?_assertEqual(3, meth:gcd(9, 6))}
+    ].
