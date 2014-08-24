@@ -64,5 +64,8 @@ gcd_test_() ->
      {"第1引数が0の場合",        ?_assertEqual(2, meth:gcd(0, 2))},
      {"第2引数が0の場合",        ?_assertEqual(2, meth:gcd(2, 0))},
      {"第1引数の方が小さい場合", ?_assertEqual(3, meth:gcd(6, 9))},
-     {"第2引数の方が小さい場合", ?_assertEqual(3, meth:gcd(9, 6))}
+     {"第2引数の方が小さい場合", ?_assertEqual(3, meth:gcd(9, 6))},
+     {"第1引数が負",             ?_assertEqual(4, meth:gcd(-8, 12))},
+     {"第2引数が負",             ?_assertEqual(5, meth:gcd(25, -15))},
+     {"両方の引数が負",          ?_assertEqual(3, meth:gcd(-27, -6))}
     ].

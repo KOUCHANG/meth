@@ -57,6 +57,6 @@ pow_int(Base, Exponent, C) when Exponent > 0 ->
 %% @doc 最大公約数.
 -spec gcd(A::integer(), B::integer()) -> GCD::integer().
 gcd(A, 0) ->
-    A;
+    abs(A);
 gcd(A, B) ->
     gcd(B, A rem B).
